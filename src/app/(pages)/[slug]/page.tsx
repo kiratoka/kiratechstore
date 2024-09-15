@@ -111,3 +111,4 @@ export async function generateMetadata({ params: { slug = 'home' } }): Promise<M
 
   return generateMeta({ doc: page })
 }
+
