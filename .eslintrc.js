@@ -1,10 +1,19 @@
 module.exports = {
   root: true,
-  extends: ['plugin:@next/next/recommended', '@payloadcms'],
-  ignorePatterns: ['**/payload-types.ts'],
-  plugins: ['prettier'],
-  rules: {
-    'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    'no-console': 'off',
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
-}
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
+  plugins: ['@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': ['error'],
+    // tambahkan aturan linting lain jika diperlukan
+  },
+  ignorePatterns: ['node_modules/', 'dist/'],
+};
