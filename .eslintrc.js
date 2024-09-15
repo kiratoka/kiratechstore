@@ -1,19 +1,7 @@
 module.exports = {
-  root: true,
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-  },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-  ],
-  plugins: ['@typescript-eslint', 'prettier'],
+  extends: 'next',
   rules: {
-    'prettier/prettier': ['error'],
-    // tambahkan aturan linting lain jika diperlukan
+    'react/no-unescaped-entities': 'off',
+    '@next/next/no-page-custom-font': 'off',
   },
-  ignorePatterns: ['node_modules/', 'dist/'],
 };
